@@ -148,6 +148,21 @@ section.navbar .container .note p {
   line-height: 1.1;
 }
 
+section.navbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+section.navbar::-webkit-scrollbar-track {
+  background-color: #eee;
+  border: none;
+  outline: none;
+}
+
+section.navbar::-webkit-scrollbar-thumb {
+  width: 90%;
+  background-color: #009b8b;
+}
+
 @media (max-width: 767px) {
   section.navbar {
     width: 50px;
