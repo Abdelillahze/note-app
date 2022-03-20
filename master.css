@@ -164,7 +164,7 @@ section.navbar .container .note p {
     width: 300px;
   }
   section.navbar.active .icon {
-    display: none;
+    margin-bottom: 20px;
   }
   section.navbar.active .container {
     display: block;

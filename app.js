@@ -212,3 +212,20 @@ let diary = new Diary();
 
 diary.create();
 diary.showLocalStorage();
+
+let icon = document.querySelector(".icon");
+let navbar = document.querySelector(".navbar");
+let overlay = document.querySelector(".overlay");
+let check = true;
+
+icon.onclick = () => {
+  if (check) {
+    navbar.classList.add("active");
+    overlay.style.display = "block";
+    check = false;
+  } else {
+    navbar.classList.remove("active");
+    overlay.style.display = "none";
+    check = true;
+  }
+};
