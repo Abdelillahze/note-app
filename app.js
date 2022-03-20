@@ -191,6 +191,12 @@ class Diary {
         note.createNavEl();
         this.notes.push(note);
       };
+
+      window.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13) {
+          this.addButton.click();
+        }
+      });
     });
   }
   showLocalStorage() {
