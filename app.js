@@ -116,26 +116,22 @@ class Note {
     setInterval(() => {
       this.noteEl.ondblclick = () => {
         if (!confirm("are u sure ?")) return;
+
         this.noteEl.remove();
-
-        this.titleEl.value = "title";
-        this.textarea.value = "note";
-        this.dateEl.innerHTML = "date";
-
         this.removeFromLocalStorage();
       };
     });
   }
   removeFromLocalStorage() {
-    let values = this.values;
-    let ids = values.map((e) => e.id);
+    this.values = JSON.parse(localStorage.getItem("notes"));
 
-    for (let i = 0; i < ids.length; i++) {
-      if (ids[i] === this.id) {
-        values.splice(i, 1);
+    for (let i = 0; i < this.values.length; i++) {
+      if (this.values[i].id === this.id) {
+        this.values.splice(i, 1);
       }
     }
-    localStorage.setItem("notes", JSON.stringify(values));
+
+    localStorage.setItem("notes", JSON.stringify(this.values));
   }
   edit() {
     setInterval(() => {
@@ -160,17 +156,17 @@ class Note {
     });
   }
   editLocalStorage() {
-    let values = this.values;
+    this.values = JSON.parse(localStorage.getItem("notes"));
 
-    for (let i = 0; i < values.length; i++) {
-      if (values[i].id === this.id) {
-        values[i].title = this.title;
-        values[i].date = this.date;
-        values[i].content = this.content;
+    for (let i = 0; i < this.values.length; i++) {
+      if (this.values[i].id === this.id) {
+        this.values[i].title = this.title;
+        this.values[i].date = this.date;
+        this.values[i].content = this.content;
       }
     }
 
-    localStorage.setItem("notes", JSON.stringify(values));
+    localStorage.setItem("notes", JSON.stringify(this.values));
   }
 }
 
@@ -235,3 +231,8 @@ icon.onclick = () => {
     check = true;
   }
 };
+
+setInterval(() => {
+  let scrollbar = document.querySelector(".scrollbar");
+  let navbar = document.querySelector(".navbar");
+}, 1000);
