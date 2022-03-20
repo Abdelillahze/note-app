@@ -193,7 +193,7 @@ class Diary {
       };
 
       window.addEventListener("keyup", (e) => {
-        if (e.keyCode === 13) {
+        if (e.ctrlKey && e.keyCode === 13) {
           this.addButton.click();
         }
       });
