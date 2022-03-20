@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+* {
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -2;
+}
+
+.date {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #707070;
+  font-size: 13px;
+  font-style: italic;
+}
+
+section.navbar {
+  width: 350px;
+  overflow-y: scroll;
+  max-height: 100vh;
+  background-color: white;
+  border-right: 1px solid #d2d2d2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+section.navbar .icon {
+  width: 25px;
+  height: 20px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+section.navbar .icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+section.navbar .container {
+  max-width: 100%;
+}
+
+section.navbar .container button {
+  background-color: #009b8b;
+  outline: none;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+section.navbar .container .note {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+section.navbar .container .note:hover, section.navbar .container .note.active {
+  background-color: #eee;
+}
+
+section.navbar .container .note h2 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+section.navbar .container .note p {
+  line-height: 1.1;
+}
+
+@media (max-width: 767px) {
+  section.navbar {
+    width: 50px;
+    min-height: 100vh;
+  }
+  section.navbar .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.navbar .container {
+    display: none;
+  }
+  section.navbar.active {
+    position: absolute;
+    width: 300px;
+  }
+  section.navbar.active .icon {
+    display: none;
+  }
+  section.navbar.active .container {
+    display: block;
+  }
+  .overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004a;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+section.notes {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  z-index: -2;
+}
+
+section.notes .container {
+  width: 100%;
+  padding-left: 40px;
+}
+
+section.notes .container input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+section.notes .container textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+section.notes .container .date {
+  font-size: 15px;
+}
+/*# sourceMappingURL=master.css.map */
